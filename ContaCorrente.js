@@ -3,7 +3,13 @@ import { Cliente } from "./Cliente.js";
 export class ContaCorrente {
   agencia;
   _cliente;
-  _saldo = 0;
+  _saldo;
+
+  constructor(agencia, cliente) {
+    this.agencia = agencia;
+    this._cliente = cliente;
+    this._saldo = 0;
+  }
 
   set cliente(cliente) {
     if(cliente instanceof Cliente) {
